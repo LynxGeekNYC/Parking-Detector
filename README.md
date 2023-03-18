@@ -4,6 +4,10 @@ Available Parking Detector
 I have been thinking about how to do this for a while until I found some YouTube video of some Python script detecting basic shapes. 
 I guess it can't get any easier than to use that idea to detect parking space. 
 
+This script captures a frame from the camera, converts it to grayscale, and detects cars in the frame using the detectMultiScale method of the CascadeClassifier class. If a car is detected, the timer is reset. If a car is not detected for a certain time interval (60 seconds in this case), an email notification is sent using the smtplib library. The email notification contains a message and an image of the last frame where the car was detected. The program exits when the 'q' key is pressed.
+
+It utilizes cars.xml library of cars to detect cars. 
+
 <h1 align="center">Hi 👋, I'm Lynx</h1>
 <h3 align="center">I'm a Hacker (Cyber Security Professional), Author, YouTuber. I go after scammers and the Russian Federation Government. Glory to Ukraine! Glory to the Heroes! If you would like to support me, please donate via CashApp: $LynxGeekNYC</h3>
 
